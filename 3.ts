@@ -163,8 +163,8 @@ let log = function (message) {
 let log2 = (message: string) => console.log(message)
 
 log2("hello")
-log2(2)
-log2(true)
+// log2(2)
+// log2(true)
 
 let log3 = (message: string, code: number = 0) => {
   console.log(message,code)

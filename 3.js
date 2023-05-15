@@ -99,3 +99,34 @@ function printResult() {
     return;
 }
 console.log("hello", printResult());
+function throwError(message, errorCode) {
+    throw {
+        message: message,
+        errorCode: errorCode,
+    };
+}
+throwError("not found", 404);
+function whileLoop() {
+    while (true) {
+        console.log("haha");
+    }
+}
+// 3-9 类型适配 Type Assertions
+var message;
+message = "abc";
+message.endsWith("c");
+var ddd = message.endsWith("c");
+var ddd1 = message.endsWith("c");
+// 3-10 函数类型
+var log = function (message) {
+    console.log(message);
+};
+var log2 = function (message) { return console.log(message); };
+log2("hello");
+// log2(2)
+// log2(true)
+var log3 = function (message, code) {
+    if (code === void 0) { code = 0; }
+    console.log(message, code);
+};
+log3("hello", 3);

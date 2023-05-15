@@ -166,8 +166,8 @@ log2("hello")
 log2(2)
 log2(true)
 
-let log3 = (message: string, code?: number) => {
+let log3 = (message: string, code: number = 0) => {
   console.log(message,code)
 }
 
-log3("hello")
+log3("hello", 3)
